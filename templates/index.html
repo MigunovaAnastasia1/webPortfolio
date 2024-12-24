@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Портфолио | Мигунова Анастасия</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-login="{{BOTNAME}}"
+            data-size="large" data-auth-url="{{BOTDOMAIN}}/auth/auth_tg" data-request-access="write"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PKL2M2ZC');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+        <header class="header">
+        <div class="header-content">
+            <div class="header-photo">
+                <img src="images/photo.jpg" alt="Мигунова Анастасия" />
+            </div>
+            <div class="header-info">
+                <h1 class="developer-box">Мигунова Анастасия</h1>
+            <div>
+            <div class="developer-box">Начинающий разработчик</div>
+            <div class="developer-box">
+                <h2>О себе</h2>
+                    <p>В данный момент обучаюсь на втором курсе программной инженерии СПБГУ, ищу себя и своё призвание. Из проектов сейчас работаю над обеспечением кросс-компиляции в CI для библиотеки SuiteSparse; после окончания работы над данным проектом хочу взяться за что-то более низкоуровневое. В целом, через год-два планирую пробовать себя где-нибудь в компаниях или брать заказы, но пока на чилле :)</p>
+            </div>
+            <div class="authorisation">
+                <p>Войти через:</p>
+                <a href="https://oauth.telegram.org/auth?bot_id={{BOTID}}&origin={{BOTDOMAIN}}">
+                    <img src="images/telegram.png" alt="telegram" />
+                </a>
+                <a href="auth/auth_vk">
+		   <img src="images/vk.png" alt="vk" />
+                </a>
+           </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills" class="skills">
+            <h2>Навыки и умения</h2>
+            <ul>
+                <li>Создание desktop-приложений</li>
+                <li>Опыт обеспечения кросс-компиляции</li>
+                <li>Обеспечение ПО модульным тестированием</li>
+                <li>Средний уровень профессионального английского</li>
+                <li>Знание таких языков программирования, как C, Python, Kotlin</li>
+                <li>Обладание базовыми знаниями об архитектуре ЭВМ и устройстве ОС</li>
+                <li>Опыт командных разработках с использованием системы контроля версий Git</li>
+                <li>Навыки QA (Quality Assurance), такие как настройка непрерывной интеграции (CI) и подключение различных анализаторов</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Некоторые примеры проектов:</h2>
+            <div class="project-list">
+                <div class="project-item">
+                   <a href="https://github.com/spbu-coding-2023/graphs-graphs-13" target="_blank">
+                      <img src="images/project1.jpg" alt="project1"/>
+                   </a>
+                   <h3>Desktop-приложение для работы с графами (Kotlin)</h3>
+                   <p>Разработанное приложение даёт возможность пользователям не только создавать графы, но и применять к ним множество известных алгоритмов (таких, как алгоритм Прима построение MST, алгоритм Дейкстры по нахождению кратчайших путей и др.), а также сохранять графы в БД и производить их чтение оттуда. Данный проект был разработан исключительно в учебных целях "в стол" ради получения опыта.</p>
+                </div>
+                <div class="project-item"> 
+                    <a href="https://github.com/spbu-coding-2023/trees-13" target="_blank">
+                       <img src="images/project2.jpg" alt="project2" />
+                    </a>
+                    <h3>Реализация алгоритмов по работе со структурой данных красно-чёрное дерево (Kotlin)</h3>
+                    <p>Разработка данного проекта была направлена на изучения языка Kotlin, понимание принципов устройства структуры данных КЧД(красно-чёрное дерево),а также реализацию алгоритмов добавления,удаления и поиска вершин в КЧД. Этот проект не предусматривает наличие GUI, потому не предназначен для пользования людьми, но имеет пользу в качестве опыта командной разработки ПО с использования Git-а.</p>
+                </div>
+                <div class="project-item">
+                    <a href="https://github.com/MigunovaAnastasia1/SuiteSparse-cross-compile" target="_blank">
+                       <img src="images/project3.png" alt="project3" />
+                    </a>
+                    <h3>Реализация кросс-компиляции в CI для SuiteSparse (YAML/Bash/C)</h3>
+                    <p>В рамках данного проекта рассматривается задача обеспечения кросс-компиляции в CI для сборки библиотеки SuiteSparse посредством использования технологий chroot-а и работы с cross-toolchain-ами. В результате сборка с кросс-компиляцией  происходит в десятки раз быстрее, чем первоначально с использованием эмулятора qemu. Претендует на звание вклада в Open Sourse :)</p>
+               </div>
+            </div>
+            <div class="optional">(при нажатии на изображение в окошке проекта вы попадаете на его git-репозиторий)</div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content developer-box">
+                <h2>Связаться со мной можно через:</h2>
+                <p>Email: <a href="mailto:amigunova422@gmail.com">amigunova422@gmail.com</a></p>
+                <p>Телефон: <a href="tel:+71234567890">+7 (981) 554-94-22</a></p>
+                <p>Соцсети: <a href="https://t.me/mimiguno">Telegram</a> | <a href="https://vk.com/nass_mi">VK</a></p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

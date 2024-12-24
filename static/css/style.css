@@ -1,0 +1,331 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #0f100c;
+    height: 100%;
+    margin: 0; 
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header {
+    position: relative; /* Добавляем относительное позиционирование */
+    background-image: url('/images/photo2.png'); /* Укажите здесь путь к вашему изображению */
+    background-size: cover; /* Изображение растягивается на весь элемент */
+    background-position: center; /* Центрируем изображение */
+    height: 700px; /* Высота header */
+    display: flex; /* Используем flexbox для центрирования текста */
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center; /* Горизонтальное выравнивание */
+    color: white; /* Цвет текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для текста */
+}
+
+
+a, a:hover {
+	text-decoration: none;
+}
+
+.socialbtns, .socialbtns ul, .socialbtns li {
+  margin: 0;
+  padding: 5px;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+	width: 40px;
+    height: 28px;
+	color: #000;
+	background-color: #FFF;
+	border: 1px solid #000;
+	padding-top: 12px;
+	border-radius: 22px;
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	-o-border-radius: 22px;
+}
+
+.socialbtns .fa:hover {
+	color: #FFF;
+	background-color: #000;
+	border: 1px solid #000;
+}
+.header-content {
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.header-photo {
+    flex: 0 0 auto; /* Запрет на расширение */
+    margin-right: 30px; /* Отступ между фотографией и текстом */
+    margin-left: 40px; 
+}
+
+.header-photo img {
+    max-height: 80vh; /* Максимальная высота изображения - чуть меньше высоты видимой области */
+    width: auto; /* Ширина будет регулироваться автоматически */
+}
+
+.header-info {
+    flex: 1; /* Заполнение оставшегося пространства */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.authorisation {
+     float: right;
+     margin-right: 100px;
+     position: relative;
+     height: 9vh;
+     width: 38vh;
+     padding: 10px 10px;
+     background-color: #f7fcfc;
+     border-radius: 30px;
+     margin: 20px;  
+     border: 5px solid #9ad913; /* Белый контур */
+}
+
+.authorisation p {
+   display: inline-block;
+   color: black;
+   text-shadow: none;
+   font-size: 30px;
+   font-weight: 600;
+   border-radius: 30px;
+}
+
+
+.authorisation a img{
+   position: relative;
+   top: 12px;
+   display: inline-block;
+   max-height: 100vh;
+
+}
+       
+.developer-box {
+    background-color: #0f100c; /* Черный фон */
+    color: #f7fcfc; /* Белый цвет текста */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px 20px; /* Отступы внутри */
+    display: inline-block; /* Чтобы размер контейнера соответствовал содержимому */
+    margin-top: 10px; /* Отступ сверху */
+    border: 2px solid white; /* Белый контур */
+    margin-right: 20px; /* Отступ между фотографией и текстом */
+    margin-left: 20px;
+}
+
+.developer-box p {
+   font-size: 22px;
+   color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0 30px;
+}
+
+
+<!-------начало стилей кнопки VK------!>
+
+.VkIdWebSdk__button_reset {
+       border: none;
+       margin: 0;
+       padding: 0;
+       width: 200px;
+       overflow: visible;
+       background: transparent;
+       color: inherit;
+       font: inherit;
+       line-height: normal;
+       -webkit-font-smoothing: inherit;
+       -moz-osx-font-smoothing: inherit;
+       -webkit-appearance: none;
+     }
+
+     .VkIdWebSdk__button {
+       background: #0077ff;
+       width: 200px;
+       cursor: pointer;
+       transition: all .1s ease-out;
+       margin: 0 auto;
+       position: absolute;
+       left: 50%; /* Сдвигаем элемент на 50% от ширины родительского элемента */
+       transform: translateX(-50%);
+       top: 50%;
+     }
+
+     .VkIdWebSdk__button_container {
+       display: flex;
+       align-items: center;
+       padding: 8px 10px;
+     }
+
+     .VkIdWebSdk__button_icon + .VkIdWebSdk__button_text {
+       margin-left: -28px;
+     }
+
+     .VkIdWebSdk__button_text {
+       display: flex;
+       font-family: -apple-system, system-ui, "Helvetica Neue", Roboto, sans-serif;
+       flex: 1;
+       justify-content: center;
+       color: #ffffff;
+     }
+
+<!-------конец стилей кнопки VK------!>
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.skills {
+    padding: 20px;
+    background-color: #0f100c; /* Темный фон для раздела навыков */
+    margin: 20px 0;
+    color: #f7fcfc;
+    border-radius: 30px;
+    border: 5px solid #f06; /* Розовый контур */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрируем текст */
+}
+
+.skills h2 {
+    font-size: 36px; /* Увеличенный размер шрифта */
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Красивая гарнитура */
+}
+
+.skills ul {
+    font-weight: 600; /* Умеренно жирный заголовок */
+    list-style-type: none; /* Убрать маркеры */
+    padding: 0; /* Убираем отступы по умолчанию */
+    text-align: center; /* Центрируем текст внутри списка */
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Красивая гарнитура */
+}
+
+.skills li {
+    margin: 10px 0; /* Отступ между элементами списка */
+    font-size: 20px; /* Увеличенный размер шрифта */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Красивая гарнитура */
+    text-align: center; /* Центрируем текст каждого элемента списка */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Красивая гарнитура */
+}
+
+.projects h2 {
+   font-size: 36px; /* Увеличенный размер шрифта */
+   margin-bottom: 15px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Красивая гарнитура */
+   color: white;
+}
+
+.projects .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.optional {
+   text-align: center;
+   font-size: 20px;
+   margin-bottom: 15px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Красивая гарнитура */
+   color: white;
+   font-style: italic;
+}
+
+.footer {
+    background: url('/images/photo2.png') no-repeat center center;
+    background-size: cover; 
+    color: #fff;
+    text-align: center;
+    position: relative; /* Позиционирование фиксированное */
+    left: 0; /* Привязка к левому краю */
+    bottom: 0; /* Привязка к нижнему краю */
+    width: 100%; /* Ширина 100% */
+    box-sizing: border-box; 
+    overflow: hidden; 
+    z-index: 1000; /* Чтобы футер оставался поверх других элементов */
+}
+
+.footer-content {
+    margin-bottom: 20px; /* Отступ между содержимым и низом футера */
+}
+
+.footer-content h2 {
+    font-size: 22px; /* Увеличим размер заголовка футера */
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    margin: 5px 0; /* Уменьшим отступы между параграфами */
+}
+
+.footer-content a {
+    color: #fff; /* Цвет ссылок */
+    text-decoration: underline; /* Подчеркнем ссылки */
+}
+
+.footer-bottom {
+    border-top: 1px solid #ffffff; /* Добавим разделитель */
+    padding-top: 10px;
+}
